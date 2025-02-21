@@ -38,10 +38,14 @@ public class Assignment1 {
                 }
             }
 
-            int temp = nums[i];
-            nums[i] = nums[minIndex];
-            nums[minIndex] = temp;
+            swap(nums, i, minIndex);
         }
+    }
+
+    private static void swap(int[] nums, int index, int minIndex) {
+        int temp = nums[index];
+        nums[index] = nums[minIndex];
+        nums[minIndex] = temp;
     }
 
     private static void mergeSort(int[] nums, int left, int right) {
